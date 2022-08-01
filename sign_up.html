@@ -1,0 +1,57 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Metamagic Sign Up Page</title>
+</head>
+<body>
+<?php
+ if(isset($_POST['create'])) {
+    echo 'User submitted';
+ }
+
+?>
+<section class="sign-form">
+    <div class="container grid">
+        <div class="signup-form card">
+        <img src="images/Vector.svg" alt="" class="logo-image">
+         <h1>Create an account</h1>
+          <p class="start">Let’s get started</p>
+            <form method="post" action="sign_up.php">
+            <label for="fullname">Full Name</label>
+                <div class="form-control">
+                    <input type="text" name="full name" placeholder="Ayansola Victoria" required>
+                    </div>
+                     <label for="emailaddress">Email Address</label>
+                      <div class="form-control">
+                        <input type="email" name="email" placeholder="ayantoluwalope@gmail.com" required>
+                    </div>
+                    <label for="emailaddress">Password</label>
+                    <div class="form-control">
+                        <input type="password" name="password" placeholder="12345678" required>
+                    </div>
+                    <label for="emailaddress">Confirm Password</label>
+                    <div class="form-control">
+                        <input type="password" name="confirm password" placeholder="12345678" required>
+                    </div>
+                        <input type="checkbox"><span>I agree to <a href = "terms.php">Terms</a> and <a href = "conditions.php">Conditions</a></span>
+                         <div class="form-control">
+                       <a href="sign_up.php">
+                  <input type="button" value="Sign Up" name = "create" class="sign-up-btn"/>
+                        </a>
+                    </div>
+                    <p>Already have an account? <a href="login.php">Sign in</a></p>
+                </form>
+            </div>
+         <div class="form-image">
+      <img src="images/undraw_sign up 1.svg" alt="sign-up-image">
+          </div>
+   </div>
+</section>
+</body>
+</html>
